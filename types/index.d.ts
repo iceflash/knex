@@ -1801,7 +1801,7 @@ declare namespace Knex {
     ): QueryBuilder<TRecord, TResult>;
     (
       columnName: string,
-      values: readonly Value[] | QueryCallback
+      values: Value[] | QueryBuilder<TRecordInner, TResultInner>
     ): QueryBuilder<TRecord, TResult>;
     <K extends keyof ResolveTableType<TRecord>>(
       columnNames: readonly K[],
